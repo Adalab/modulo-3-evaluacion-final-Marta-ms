@@ -1,8 +1,12 @@
 
 
-function CharactersCard() {
+function CharactersCard() { //cada lista de mi elemento
   return (
-    <div>CharactersCard</div>
+    <li>
+        <img src="" alt="" />
+        <h3>Nombre</h3>
+        <p>Especie</p>
+    </li>
   )
 }
 
