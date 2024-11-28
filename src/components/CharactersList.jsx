@@ -1,4 +1,4 @@
-import CharactersCard from "./CharactersCard"
+import CharactersCard from "./CharactersCard";
 
 
 function CharactersList({ characters }) {
