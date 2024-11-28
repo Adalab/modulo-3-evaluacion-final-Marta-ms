@@ -1,4 +1,5 @@
 import CharactersCard from "./CharactersCard";
+import "../scss/layout/CharactersList.scss";
 
 
 function CharactersList({ characters }) {
@@ -10,7 +11,9 @@ function CharactersList({ characters }) {
   return (
     <section>
         <h2>Lista personajes</h2>
-        <ul>{charactersElements}</ul> {/*el array de map lo pintamos aquí*/}  
+        <ul className="characters-list">
+          {charactersElements}
+        </ul> {/*el array de map lo pintamos aquí*/}  
     </section>
   )
 }

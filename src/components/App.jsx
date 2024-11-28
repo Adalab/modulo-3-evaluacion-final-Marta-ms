@@ -52,7 +52,7 @@ function App() {
     <header>
       <h1>Rick and Morty</h1>
     </header>
-    <main>
+    <main className="main-container">
       <Routes>
         <Route path="/" element={(
           <>
@@ -63,6 +63,7 @@ function App() {
         )}/>
 
         <Route path="/person/:idPerson" element={<CharactersDetail character={characterSelected} />} />
+        <Route path="*" element={<h5> Pagina no encontrada</h5>} />
        
       </Routes>
     </main>

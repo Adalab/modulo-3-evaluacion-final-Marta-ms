@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function CharactersCard({ charactersData }) { //cada lista de mi elemento
     //console.log(charactersData);
   return (
-    <li>
+    <li className="card">
         <Link to={`/person/${charactersData.id}`}>
             <img src={charactersData.image} alt={charactersData.name} />
             <h3>{charactersData.name}</h3>
