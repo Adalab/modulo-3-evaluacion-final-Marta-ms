@@ -6,7 +6,7 @@
         const parsedCharacters = data.results.map((character) => {
             //console.log(character);
             return {
-                photo: character.image,
+                image: character.image,
                 name: character.name,
                 species: character.species,
                 planet: character.origin.name,

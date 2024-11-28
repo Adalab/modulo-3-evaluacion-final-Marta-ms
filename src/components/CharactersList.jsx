@@ -5,7 +5,7 @@ function CharactersList({ characters }) {
 
     //por cada elemento de mi lista quiero que me pinte un personaje
     const charactersElements = characters.map((character) => {
-        return <CharactersCard key={character.id}/>
+        return <CharactersCard charactersData={character} key={character.id}/>
     })
   return (
     <section>

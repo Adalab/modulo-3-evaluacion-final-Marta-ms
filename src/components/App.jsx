@@ -10,7 +10,7 @@ function App() {
   const [characters, setCharacters] = useState ([]);
 
   useEffect(() => {
-    getCharactersFromApi().then((charactersData) => { //para que me devuelva los usurios .then 
+    getCharactersFromApi().then((charactersData) => { //para que me devuelva los usurios .then y lo que paso a la card
        //console.log(characters);
        setCharacters(charactersData) //ver en components
     })
@@ -25,7 +25,6 @@ function App() {
     </header>
     <main>
       <CharactersList characters={characters} />
-      <CharactersCard />
     </main>
     </>
   )
