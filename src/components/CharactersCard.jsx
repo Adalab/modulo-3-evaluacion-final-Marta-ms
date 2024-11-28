@@ -1,7 +1,7 @@
 
 
 function CharactersCard({ charactersData }) { //cada lista de mi elemento
-    console.log(charactersData);
+    //console.log(charactersData);
   return (
     <li>
         <img src={charactersData.image} alt={charactersData.name} />
