@@ -32,8 +32,16 @@ function App() {
   const filteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   })
+  .sort((a, b) => a.name.localeCompare(b.name)); //orden alfabético 
+  
+
+  
+  //const resultadosFiltrados.sort((a, b) => a.name.localeCompare(b.name));
+  
+ 
   //console.log(filteredCharacters);
 
+  
   
 
   const { pathname } = useLocation();
