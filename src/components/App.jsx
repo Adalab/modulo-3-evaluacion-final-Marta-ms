@@ -34,6 +34,8 @@ function App() {
   })
   //console.log(filteredCharacters);
 
+  
+
   const { pathname } = useLocation();
   const routeData = matchPath("/person/:idPerson", pathname);
   //console.log(pathname);

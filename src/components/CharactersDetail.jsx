@@ -1,8 +1,9 @@
 import "../scss/layout/CharactersDetail.scss";
+import { Link } from 'react-router-dom';
 
 
 function CharactersDetail({ character }) {
-    console.log(character);
+    //console.log(character);
 
     if (!character) {
         return <div>Loading...</div>; // Mientras se carga el personaje, mostramos un mensaje
@@ -11,6 +12,9 @@ function CharactersDetail({ character }) {
 
     return (
         <section className="details-container">
+            <Link to="/">
+                <button className="detail-back">Volver</button>
+            </Link>
             <div className="detail-photo">
                 <img className="photo"src={character.image} alt={character.name} />
             </div>
