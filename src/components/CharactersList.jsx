@@ -28,8 +28,8 @@ function CharactersList({ characters }) {
 
 
   return (
-    <section>
-        <h2>Lista personajes</h2>
+    <section clasName="list-container">
+        
         <ul className="characters-list">
           {charactersElements}
         </ul> {/*el array de map lo pintamos aquí*/}  

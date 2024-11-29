@@ -1,4 +1,4 @@
-import "../scss/App.scss"
+import "../scss/layout/Main.scss"
 import logo from "../images/RyM.png"
 
 function Header() {

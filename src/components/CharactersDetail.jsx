@@ -20,11 +20,12 @@ function CharactersDetail({ character }) {
             </div>
             <div className="detail-text">
                 <h4>{character.name}</h4>
-                <p>{character.specie}</p>
+                <p>{character.species}</p>
+                    <span>{character.species === "Alien" ? "👽" : "🫀"}</span>
                 <p>Viene de: {character.planet}</p>
                 <p>Sale en: {character.episode.length} episodios</p>
                 <p>Está: {character.status}
-                <span>{character.status === "Alive" ? "🤪" : "😵"}</span>
+                    <span>{character.status === "Alive" ? "🤪" : "😵"}</span>
                 </p>
             </div>
             

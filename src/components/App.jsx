@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     getCharactersFromApi().then((charactersData) => { //para que me devuelva los usurios .then y lo que paso a la card
-       //console.log(characters);
+       
        setCharacters(charactersData) //ver en components
        
     })
@@ -32,31 +32,25 @@ function App() {
   const filteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   })
-  .sort((a, b) => a.name.localeCompare(b.name)); //orden alfabético 
-  
+  .sort((a, b) => a.name.localeCompare(b.name)); //orden alfabético, a y b son nombre del listado y los compara 
 
-  
-  //const resultadosFiltrados.sort((a, b) => a.name.localeCompare(b.name));
-  
- 
-  //console.log(filteredCharacters);
 
   
   
 
   const { pathname } = useLocation();
   const routeData = matchPath("/person/:idPerson", pathname);
-  //console.log(pathname);
+ 
 
   const idPerson = routeData !== null ? routeData.params.idPerson : null;
 
-  //const perId = String(urlId);
+
   
     const characterSelected = characters.find((character) => {
-        return character.id === Number(idPerson);
+        return character.id === Number(idPerson); //me  fallaba la página usando parseInt
         
     })
-    //console.log(characterSelected);
+    
 
   return (
     <>
