@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import getCharactersFromApi from "../services/getCharactersFromApi";
 import Filters from "./Filters";
 import CharactersDetail from "./CharactersDetail";
+import Header from "./Header";
 import { Routes, Route, useLocation, matchPath } from "react-router-dom";
 
 function App() {
@@ -49,9 +50,8 @@ function App() {
 
   return (
     <>
-    <header>
-      <h1>Rick and Morty</h1>
-    </header>
+    <Header />
+    
     <main className="main-container">
       <Routes>
         <Route path="/" element={(

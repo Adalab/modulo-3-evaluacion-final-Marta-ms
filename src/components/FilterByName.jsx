@@ -8,9 +8,10 @@ function FilterByName({ onChangeName }) {
     }
   return (
     <>
-        <label htmlFor="name">Personaje</label>
-        <input type="text" id="name" onChange={handleChange} />
     
+        <label htmlFor="name">Personaje</label>
+        <input type="text" id="name" placeholder="encuentralo aqui" onChange={handleChange} />
+      
     </>
   )
 }
