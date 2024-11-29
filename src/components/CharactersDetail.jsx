@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 function CharactersDetail({ character }) {
-    //console.log(character);
+    
 
     if (!character) {
         return <div>Loading...</div>; // Mientras se carga el personaje, mostramos un mensaje

@@ -13,6 +13,7 @@ function App() {
   //creo una variable de estado para poner modificar lo que se pinta en el html 
   const [characters, setCharacters] = useState ([]);
   const [filterName, setFilterName] = useState("");
+  const [filterSpecie, setFilterSpecie] = useState("");
 
   useEffect(() => {
     getCharactersFromApi().then((charactersData) => { //para que me devuelva los usurios .then y lo que paso a la card
@@ -28,10 +29,22 @@ function App() {
     setFilterName(valueInput);
   }
 
+  const handleFilterSpecie = (value) => {
+    setFilterSpecie(value);
+}
+
   //FILTRAR
-  const filteredCharacters = characters.filter((character) => {
+  const filteredCharacters = characters
+  .filter((character) => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   })
+  .filter((character) => {
+    
+    
+    return filterSpecie === "" ? true : character.species === filterSpecie;
+
+  })
+
   .sort((a, b) => a.name.localeCompare(b.name)); //orden alfabético, a y b son nombre del listado y los compara 
 
 
@@ -60,7 +73,7 @@ function App() {
       <Routes>
         <Route path="/" element={(
           <>
-            <Filters onChangeName={handleFilterName}/>
+            <Filters onChangeName={handleFilterName} onChangeSpecie={handleFilterSpecie}/>
             <CharactersList characters={filteredCharacters} />
           </>
 

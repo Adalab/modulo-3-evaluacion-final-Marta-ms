@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 
 function CharactersCard({ charactersData }) { //cada lista de mi elemento
-    //console.log(charactersData);
+    
   return (
     <li className="card">
         <Link to={`/person/${charactersData.id}`}>

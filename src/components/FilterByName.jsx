@@ -3,7 +3,7 @@
 function FilterByName({ onChangeName }) {
 
     const handleChange = (ev) => {
-        //console.log(ev.target.value);
+       
         onChangeName(ev.target.value);
     }
   return (
